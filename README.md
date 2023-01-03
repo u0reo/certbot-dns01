@@ -3,6 +3,8 @@
 DockerでDNSサーバーを立ち上げ、dns-01チャレンジを行えます。  
 Be able to run DNS-01 challenge by launching a DNS server on Docker.
 
+[![dockeri.co](https://dockerico.blankenship.io/image/ureo/certbot-dns01)](https://hub.docker.com/r/ureo/certbot-dns01)
+
 ## 参考</br>Reference
 
 [Let’s Encryptでワイルドカード証明書を取得する話 | IIJ Engineers Blog](https://eng-blog.iij.ad.jp/archives/14198)
@@ -53,7 +55,7 @@ sudo docker run --rm -i --net host \
 -v knot_rundir:/rundir \
 -v knot_storage:/storage \
 -v /usr/syno/etc/certificate:/certificate \
-certbot-dns01:0.1 ./script.sh
+ureo/certbot-dns01:0.1 ./script.sh
 ```
 
 ## 手順</br>Procedure
