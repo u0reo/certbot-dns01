@@ -20,7 +20,7 @@ echo "\n"
 
 # Check if updated or not
 if [ "${before_cert_md5}" = "${after_cert_md5}" ]; then
-  echo "The certificate for the domain (${DOMAIN}) has not been renewed."
+  echo "\nThe certificate for the domain (${DOMAIN}) has not been renewed.\n"
   exit
 fi
 
@@ -49,7 +49,7 @@ fi
 # done
 
 # if [ -z $domain_id ]; then
-#   echo "No certificate file found for the domain (${DOMAIN})."
+#   echo "\nNo certificate file found for the domain (${DOMAIN}).\n"
 #   exit
 # fi
 

@@ -48,8 +48,4 @@ dns_rfc2136_algorithm = HMAC-SHA256\n"\
 #   $@
 # fi
 
-knotd -d && sleep 1
-
-keymgr _acme-challenge.$DOMAIN ds | grep ' 2 ' | sed -e "s/.* DS \(.* 2 .*\)/\1/g"
-
-knotc stop > /dev/null
+./get_ds.sh
